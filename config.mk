@@ -46,7 +46,7 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/system/lib64/libmorpho_panorama.so:system/lib64/libmorpho_panorama.so \
     $(VENDOR_PATH)/system/lib64/libmorpho_panorama_gp.so:system/lib64/libmorpho_panorama_gp.so \
 
-ifeq ($(TARGET_DEVICE),chiron)
+ifeq ($(filter chiron,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/system/etc/device_features/chiron.xml:system/etc/device_features/chiron.xml
 endif
